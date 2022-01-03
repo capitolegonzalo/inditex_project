@@ -20,6 +20,18 @@ public final class TestUtils {
         return productPriceEntity;
     }
 
+    public static ProductPriceResponse getProductPriceResponseTest1(){
+        ProductPriceResponse productPriceResponse = new ProductPriceResponse();
+        productPriceResponse.setPrice(35.5);
+        productPriceResponse.setProductId(35455);
+        productPriceResponse.setBrandId(1);
+        productPriceResponse.setPriceList(1);
+        DateTimeFormatter formatter = DateTimeFormatter.ofPattern(ProductPriceConstants.DATE_FORMAT);
+        productPriceResponse.setStartDate(LocalDateTime.parse("2020-06-14 00:00:00", formatter));
+        productPriceResponse.setEndDate(LocalDateTime.parse("2020-12-31 23:59:59", formatter));
+        return productPriceResponse;
+    }
+
     public static ProductPriceEntity getProductPriceEntityTest2(){
         ProductPriceEntity productPriceEntity = new ProductPriceEntity();
         productPriceEntity.setPrice(25.45);
@@ -30,6 +42,18 @@ public final class TestUtils {
         productPriceEntity.setStartDate(LocalDateTime.parse("2020-06-14 15:00:00", formatter));
         productPriceEntity.setEndDate(LocalDateTime.parse("2020-06-14 18:30:00", formatter));
         return productPriceEntity;
+    }
+
+    public static ProductPriceResponse getProductPriceResponseTest2(){
+        ProductPriceResponse productPriceResponse = new ProductPriceResponse();
+        productPriceResponse.setPrice(25.45);
+        productPriceResponse.setProductId(35455);
+        productPriceResponse.setBrandId(1);
+        productPriceResponse.setPriceList(1);
+        DateTimeFormatter formatter = DateTimeFormatter.ofPattern(ProductPriceConstants.DATE_FORMAT);
+        productPriceResponse.setStartDate(LocalDateTime.parse("2020-06-14 15:00:00", formatter));
+        productPriceResponse.setEndDate(LocalDateTime.parse("2020-06-14 18:30:00", formatter));
+        return productPriceResponse;
     }
 
     public static ProductPriceEntity getProductPriceEntityTest3(){
@@ -44,6 +68,18 @@ public final class TestUtils {
         return productPriceEntity;
     }
 
+    public static ProductPriceResponse getProductPriceResponseTest3(){
+        ProductPriceResponse productPriceResponse = new ProductPriceResponse();
+        productPriceResponse.setPrice(35.5);
+        productPriceResponse.setProductId(35455);
+        productPriceResponse.setBrandId(1);
+        productPriceResponse.setPriceList(1);
+        DateTimeFormatter formatter = DateTimeFormatter.ofPattern(ProductPriceConstants.DATE_FORMAT);
+        productPriceResponse.setStartDate(LocalDateTime.parse("2020-06-14 00:00:00", formatter));
+        productPriceResponse.setEndDate(LocalDateTime.parse("2020-12-31 23:59:59", formatter));
+        return productPriceResponse;
+    }
+
     public static ProductPriceEntity getProductPriceEntityTest4(){
         ProductPriceEntity productPriceEntity = new ProductPriceEntity();
         productPriceEntity.setPrice(30.5);
@@ -56,6 +92,18 @@ public final class TestUtils {
         return productPriceEntity;
     }
 
+    public static ProductPriceResponse getProductPriceResponseTest4(){
+        ProductPriceResponse productPriceResponse = new ProductPriceResponse();
+        productPriceResponse.setPrice(30.5);
+        productPriceResponse.setProductId(35455);
+        productPriceResponse.setBrandId(1);
+        productPriceResponse.setPriceList(1);
+        DateTimeFormatter formatter = DateTimeFormatter.ofPattern(ProductPriceConstants.DATE_FORMAT);
+        productPriceResponse.setStartDate(LocalDateTime.parse("2020-06-15 00:00:00", formatter));
+        productPriceResponse.setEndDate(LocalDateTime.parse("2020-06-15 11:00:00", formatter));
+        return productPriceResponse;
+    }
+
     public static ProductPriceEntity getProductPriceEntityTest5(){
         ProductPriceEntity productPriceEntity = new ProductPriceEntity();
         productPriceEntity.setPrice(38.95);
@@ -66,6 +114,18 @@ public final class TestUtils {
         productPriceEntity.setStartDate(LocalDateTime.parse("2020-06-15 16:00:00", formatter));
         productPriceEntity.setEndDate(LocalDateTime.parse("2020-12-31 23:59:59", formatter));
         return productPriceEntity;
+    }
+
+    public static ProductPriceResponse getProductPriceResponseTest5(){
+        ProductPriceResponse productPriceResponse = new ProductPriceResponse();
+        productPriceResponse.setPrice(38.95);
+        productPriceResponse.setProductId(35455);
+        productPriceResponse.setBrandId(1);
+        productPriceResponse.setPriceList(1);
+        DateTimeFormatter formatter = DateTimeFormatter.ofPattern(ProductPriceConstants.DATE_FORMAT);
+        productPriceResponse.setStartDate(LocalDateTime.parse("2020-06-15 16:00:00", formatter));
+        productPriceResponse.setEndDate(LocalDateTime.parse("2020-12-31 23:59:59", formatter));
+        return productPriceResponse;
     }
 
     public static ProductPriceResponse createResponse(LocalDateTime startDate, LocalDateTime endDate, Double price) {

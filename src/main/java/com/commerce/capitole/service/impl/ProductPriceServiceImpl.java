@@ -13,7 +13,6 @@ import com.commerce.capitole.service.ProductPriceService;
 import com.commerce.capitole.validator.ProductPriceValidator;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
-import org.mapstruct.factory.Mappers;
 import org.springframework.stereotype.Service;
 
 @Service
@@ -24,6 +23,8 @@ public class ProductPriceServiceImpl implements ProductPriceService {
     private final ProductPriceRepository productPriceRepository;
 
     private final ProductPriceValidator productPriceValidator;
+
+    private final ProductPriceResponeMapper productPriceResponeMapper;
 
     /**
      * Service that checks the price of the selected product
@@ -40,7 +41,6 @@ public class ProductPriceServiceImpl implements ProductPriceService {
         log.info("Correct validation");
         ProductPriceResponse response = new ProductPriceResponse();
         LocalDateTime dateTime = LocalDateTime.parse(date, formatter);
-        final ProductPriceResponeMapper productPriceResponeMapper = Mappers.getMapper(ProductPriceResponeMapper.class);
         List<ProductPriceEntity> productPrices = productPriceRepository.findByDateAndProductIdAndBrandId(brandId, productId, dateTime);
         if (!productPrices.isEmpty()) {
             log.info("Product found successfully");
