@@ -11,7 +11,7 @@ import com.commerce.capitole.entity.ProductPriceEntity;
 
 public interface ProductPriceRepository extends JpaRepository<ProductPriceEntity, Integer> {
 	
-	@Query("from ProductPriceEntity where brand.id = :brandId and productId = :productId and startDate <= :date" +
+	@Query("from ProductPriceEntity where brandId = :brandId and productId = :productId and startDate <= :date" +
 			" and endDate >= :date order by priority desc")
 	List<ProductPriceEntity> findByDateAndProductIdAndBrandId(@Param("brandId") Integer brandId,
 															  @Param("productId") Integer productId,
