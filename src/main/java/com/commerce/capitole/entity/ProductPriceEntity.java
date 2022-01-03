@@ -11,9 +11,8 @@ import lombok.Data;
 @Data
 public class ProductPriceEntity {
 
-	@OneToOne(cascade = CascadeType.ALL)
-	@JoinColumn(name = "BRAND_ID")
-	private BrandEntity brand;
+	@Column(name = "BRAND_ID")
+	private Integer brandId;
 	
 	@Column(name = "START_DATE")
 	private LocalDateTime startDate;

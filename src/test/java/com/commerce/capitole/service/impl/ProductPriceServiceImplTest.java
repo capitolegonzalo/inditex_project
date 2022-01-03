@@ -1,8 +1,6 @@
 package com.commerce.capitole.service.impl;
 
-import com.commerce.capitole.constants.ProductPriceConstants;
 import com.commerce.capitole.dto.ProductPriceResponse;
-import com.commerce.capitole.entity.BrandEntity;
 import com.commerce.capitole.entity.ProductPriceEntity;
 import com.commerce.capitole.repository.ProductPriceRepository;
 import com.commerce.capitole.utils.TestUtils;
@@ -15,8 +13,6 @@ import org.mockito.Mock;
 import org.mockito.Mockito;
 import org.mockito.MockitoAnnotations;
 
-import java.time.LocalDateTime;
-import java.time.format.DateTimeFormatter;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -46,7 +42,7 @@ public class ProductPriceServiceImplTest {
         Assertions.assertNotNull(response);
         Assertions.assertEquals(productPriceEntityList.get(0).getPrice(), response.getPrice());
         Assertions.assertEquals(productPriceEntityList.get(0).getProductId(), response.getProductId());
-        Assertions.assertEquals(productPriceEntityList.get(0).getBrand().getId(), response.getBrandId());
+        Assertions.assertEquals(productPriceEntityList.get(0).getBrandId(), response.getBrandId());
         Assertions.assertEquals(productPriceEntityList.get(0).getStartDate(), response.getStartDate());
         Assertions.assertEquals(productPriceEntityList.get(0).getEndDate(), response.getEndDate());
     }
@@ -61,7 +57,7 @@ public class ProductPriceServiceImplTest {
         Assertions.assertNotNull(response);
         Assertions.assertEquals(productPriceEntityList.get(0).getPrice(), response.getPrice());
         Assertions.assertEquals(productPriceEntityList.get(0).getProductId(), response.getProductId());
-        Assertions.assertEquals(productPriceEntityList.get(0).getBrand().getId(), response.getBrandId());
+        Assertions.assertEquals(productPriceEntityList.get(0).getBrandId(), response.getBrandId());
         Assertions.assertEquals(productPriceEntityList.get(0).getStartDate(), response.getStartDate());
         Assertions.assertEquals(productPriceEntityList.get(0).getEndDate(), response.getEndDate());
     }
@@ -76,7 +72,7 @@ public class ProductPriceServiceImplTest {
         Assertions.assertNotNull(response);
         Assertions.assertEquals(productPriceEntityList.get(0).getPrice(), response.getPrice());
         Assertions.assertEquals(productPriceEntityList.get(0).getProductId(), response.getProductId());
-        Assertions.assertEquals(productPriceEntityList.get(0).getBrand().getId(), response.getBrandId());
+        Assertions.assertEquals(productPriceEntityList.get(0).getBrandId(), response.getBrandId());
         Assertions.assertEquals(productPriceEntityList.get(0).getStartDate(), response.getStartDate());
         Assertions.assertEquals(productPriceEntityList.get(0).getEndDate(), response.getEndDate());
     }
@@ -91,7 +87,7 @@ public class ProductPriceServiceImplTest {
         Assertions.assertNotNull(response);
         Assertions.assertEquals(productPriceEntityList.get(0).getPrice(), response.getPrice());
         Assertions.assertEquals(productPriceEntityList.get(0).getProductId(), response.getProductId());
-        Assertions.assertEquals(productPriceEntityList.get(0).getBrand().getId(), response.getBrandId());
+        Assertions.assertEquals(productPriceEntityList.get(0).getBrandId(), response.getBrandId());
         Assertions.assertEquals(productPriceEntityList.get(0).getStartDate(), response.getStartDate());
         Assertions.assertEquals(productPriceEntityList.get(0).getEndDate(), response.getEndDate());
     }
@@ -106,7 +102,7 @@ public class ProductPriceServiceImplTest {
         Assertions.assertNotNull(response);
         Assertions.assertEquals(productPriceEntityList.get(0).getPrice(), response.getPrice());
         Assertions.assertEquals(productPriceEntityList.get(0).getProductId(), response.getProductId());
-        Assertions.assertEquals(productPriceEntityList.get(0).getBrand().getId(), response.getBrandId());
+        Assertions.assertEquals(productPriceEntityList.get(0).getBrandId(), response.getBrandId());
         Assertions.assertEquals(productPriceEntityList.get(0).getStartDate(), response.getStartDate());
         Assertions.assertEquals(productPriceEntityList.get(0).getEndDate(), response.getEndDate());
     }
